@@ -15,4 +15,40 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+```{r}
+
+# find the slope of f(x)=x2 at x=3 ----
+eq1 <- function(x) {
+  x^2
+}
+
+deriv_eq1 <- D(expr = expression(x^2), name = "x")
+
+deriv_eq1_fun <- function(x) {
+  2 * x
+}
+deriv_eq1_fun(3)
+
+```
+
+# find the slope of pa ----
+
+```{r}
+eq2 <-function(a){2*(3*a+2)^4 -5}
+
+deriv_eq2 <- D(expr = expression (2*(3*a+2)^4 -5), name = "a")
+ deriv_eq2
+
+ deriv_eq2_fun <- function(a) {
+   2 * (4 * (3 * (3 * a + 2)^3))
+ }
+ 
+ deriv_eq2_fun(1.2)
+``` 
+
+# Section 3 - Penguin plot
+
+```{r}
+
+```
 
