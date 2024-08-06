@@ -43,6 +43,26 @@ deriv_eq2 <- D(expr = expression (2*(3*a+2)^4 -5), name = "a")
 # Section 3 - Penguin plot
 
 ```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+data(package='palmerpenguins')
+penguins <- penguins
+
+ggplot(data = penguins, aes(x = bill_depth_mm, y = bill_length_mm, color = species))+
+  geom_point()+
+  ggtitle("Penguin Bill Length in relation to Penguin Bill Depth")+
+  xlab("Bill Depth (in millimeters)") 
 
 ```
+
+```{r}
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm, color = species)) +
+  geom_jitter()+ggtitle("Flipper Length by Penguin Species") + 
+  xlab("Penguin Species") + 
+  ylab("Flipper Length (in mm)")
+
+
+```
+
 
